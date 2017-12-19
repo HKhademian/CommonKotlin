@@ -1,0 +1,50 @@
+project.ext {
+	publishs = [
+		group            : 'ir.hossainco',
+		artifact         : 'commonkotlin',
+		name             : 'CommonKotlin',
+		version          : '1.0.0-alpha1',
+		des              : 'Collection of useful Kotlin utils for android development',
+		url              : 'https://hossainco.github.io/commonkotlin/',
+
+		jar              : [
+			prefix : '',
+			postfix: '',
+		],
+
+		bintray          : [
+			repo: 'maven',
+			org : 'hossainco',
+			name: 'CommonKotlin',
+		],
+
+		scm              : [
+			url                : 'https://hossainco.github.io/CommonKotlin/',
+			connection         : 'scm:git:https://github.com/HossainCo/CommonKotlin.git',
+			developerConnection: 'scm:git:ssh:git@github.com/HossainCo/CommonKotlin.git',
+		],
+
+		developers       : [
+			[
+				id   : 'hossainco',
+				name : 'HossainCo',
+				email: 'hco@post.com',
+			],
+		],
+
+		licenses         : [
+			[
+				name        : 'MIT License',
+				url         : 'https://opensource.org/licenses/MIT',
+				distribution: 'repo',
+				list        : [
+					'MIT',
+				],
+			],
+		],
+
+		removeDependecies: [
+
+		],
+	]
+}
