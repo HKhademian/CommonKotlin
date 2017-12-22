@@ -1,14 +1,27 @@
-image: javiersantos/android-ci:27.0.2
+image: openjdk:8-jdk
 
-before_script:
-    - export GRADLE_USER_HOME=`pwd`/.gradle
-    - chmod +x ./gradlew
+variables:
+  ANDROID_COMPILE_SDK: "27"
+  ANDROID_BUILD_TOOLS: "27.0.2"
+  ANDROID_SDK_TOOLS: "25.2.5"
 
 cache:
-  key: "$CI_COMMIT_REF_NAME"
   paths:
      - .gradle/wrapper
      - .gradle/caches
+
+before_script:
+  - echo ${ANDROID_SDK_TOOLS}
+  - apt-get --quiet update --yes
+  - apt-get --quiet install --yes wget tar unzip lib32stdc++6 lib32z1
+  - wget --quiet --output-document=android-sdk.zip "https://dl.google.com/android/repository/tools_r${ANDROID_SDK_TOOLS}-linux.zip"
+  - unzip android-sdk.zip -d .android
+  - export ANDROID_HOME=$PWD/.android
+  - export PATH=$PATH:$PWD/.android/platform-tools/
+#  - echo y | .android/tools/android --silent update sdk --no-ui --all --filter "android-${ANDROID_COMPILE_SDK}",platform-tools,"build-tools-${ANDROID_BUILD_TOOLS}",extra-android-m2repository,extra-google-google_play_services,extra-google-m2repository
+  - echo y | .android/tools/bin/sdkmanager "android-${ANDROID_COMPILE_SDK},platform-tools,build-tools-${ANDROID_BUILD_TOOLS},extra-android-m2repository,extra-google-google_play_services,extra-google-m2repository"
+  - export GRADLE_USER_HOME=`pwd`/.gradle
+  - chmod +x ./gradlew
 
 stages:
   - build
