@@ -9,6 +9,7 @@ import android.support.v4.app.Fragment
 import ir.hossainco.commonkotlin.Provider
 
 /* source inspired from: https://proandroiddev.com/kotlin-delegates-in-android-development-part-2-2c15c11ff438 */
+@Suppress("UNCHECKED_CAST")
 inline fun <VM : ViewModel> viewModelFactory(crossinline provider: Provider<VM>) =
 	object : ViewModelProvider.Factory {
 		override fun <T : ViewModel> create(clazz: Class<T>) = provider() as T
