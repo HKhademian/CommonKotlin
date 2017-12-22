@@ -44,7 +44,14 @@ project.ext {
 		],
 
 		removeDependecies: [
-
+			depsPack.support.v4,
+			depsPack.kotlin.stdlib,
+			depsPack.arch.lifecycle.runtime,
+			depsPack.arch.lifecycle.extensions,
+			depsPack.arch.lifecycle.reactivestreams,
+			depsPack.rx2.java,
+			depsPack.rx2.kotlin,
+			depsPack.rx2.android,
 		],
 	]
 }
