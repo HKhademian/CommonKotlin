@@ -40,3 +40,5 @@ before_install:
 
 script:
   - ./gradlew build
+  - ./gradlew assemble
+  - ./gradlew install
