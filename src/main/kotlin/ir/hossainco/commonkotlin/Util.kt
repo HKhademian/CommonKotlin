@@ -1,8 +1,6 @@
 @file:Suppress("unused")
 
-package ir.hossainco.commonkotlin.util
-
-import ir.hossainco.commonkotlin.Block
+package ir.hossainco.commonkotlin
 
 
 fun <T> consume(result: T, block: Block): T {

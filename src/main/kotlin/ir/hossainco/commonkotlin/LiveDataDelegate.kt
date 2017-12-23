@@ -4,7 +4,6 @@ package ir.hossainco.commonkotlin
 
 import android.arch.lifecycle.LifecycleOwner
 import android.arch.lifecycle.MutableLiveData
-import ir.hossainco.commonkotlin.util.observeNotnull
 import kotlin.properties.ReadWriteProperty
 import kotlin.reflect.KProperty
 

@@ -1,6 +1,6 @@
 @file:Suppress("unused")
 
-package ir.hossainco.commonkotlin.util
+package ir.hossainco.commonkotlin
 
 import android.arch.lifecycle.*
 
