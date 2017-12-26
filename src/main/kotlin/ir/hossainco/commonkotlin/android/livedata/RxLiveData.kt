@@ -1,5 +1,5 @@
 @file:Suppress("unused")
-package ir.hossainco.commonkotlin
+package ir.hossainco.commonkotlin.android.livedata
 
 import io.reactivex.Observable
 

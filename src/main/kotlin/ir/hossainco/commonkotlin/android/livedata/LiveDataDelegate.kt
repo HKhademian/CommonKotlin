@@ -1,6 +1,6 @@
 @file:Suppress("unused")
 
-package ir.hossainco.commonkotlin
+package ir.hossainco.commonkotlin.android.livedata
 
 import android.arch.lifecycle.LifecycleOwner
 import android.arch.lifecycle.MutableLiveData

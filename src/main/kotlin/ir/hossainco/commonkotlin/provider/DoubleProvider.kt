@@ -1,6 +1,6 @@
 @file:Suppress("NOTHING_TO_INLINE")
 
-package ir.hossainco.commonkotlin
+package ir.hossainco.commonkotlin.provider
 
 typealias DoubleProvider<R, P1, P2> = (P1, P2) -> R
 

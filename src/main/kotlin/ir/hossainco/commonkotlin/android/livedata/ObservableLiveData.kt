@@ -1,4 +1,4 @@
-package ir.hossainco.commonkotlin
+package ir.hossainco.commonkotlin.android.livedata
 
 import android.arch.lifecycle.LiveData
 import io.reactivex.Observable

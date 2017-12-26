@@ -1,6 +1,6 @@
 @file:Suppress("NOTHING_TO_INLINE")
 
-package ir.hossainco.commonkotlin
+package ir.hossainco.commonkotlin.provider
 
 typealias SingleProvider<R, P> = (P) -> R
 

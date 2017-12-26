@@ -2,7 +2,7 @@
 
 /* some source inspired from: https://proandroiddev.com/kotlin-delegates-in-android-development-part-2-2c15c11ff438 */
 
-package ir.hossainco.commonkotlin
+package ir.hossainco.commonkotlin.android.viewmodel
 
 import android.annotation.SuppressLint
 import android.app.Activity
@@ -14,6 +14,8 @@ import android.arch.lifecycle.ViewModelProviders
 import android.content.Context
 import android.support.v4.app.Fragment
 import android.support.v4.app.FragmentActivity
+import ir.hossainco.commonkotlin.provider.Provider
+import ir.hossainco.commonkotlin.provider.SingleProvider
 
 @Suppress("UNCHECKED_CAST")
 inline fun <VM : ViewModel> viewModelFactory(crossinline provider: Provider<VM>) =

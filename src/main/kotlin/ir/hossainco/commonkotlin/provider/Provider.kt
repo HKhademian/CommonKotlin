@@ -1,6 +1,6 @@
 @file:Suppress("NOTHING_TO_INLINE", "unused")
 
-package ir.hossainco.commonkotlin
+package ir.hossainco.commonkotlin.provider
 
 typealias Provider<R> = () -> R
 
