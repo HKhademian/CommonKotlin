@@ -5,8 +5,8 @@ import ir.hossainco.commonkotlin.provider.SingleProvider
 
 typealias Observe<T, R> = SingleProvider<T, R>
 
-fun <T> Observe<Any, T>.toObserverNotNull(): Observer<T>
-	= Observer { it!!.let(this) }
+inline fun <T> toObserver(crossinline observe: Observe<Any, T>): Observer<T>
+	= Observer { it?.let(observe) }
 
-fun <T> Observe<Any, T>.toObserver(): Observer<T>
-	= Observer { it?.let(this) }
+inline fun <T> toObserverNotNull(crossinline observe: Observe<Any, T>): Observer<T>
+	= Observer { it!!.let(observe) }
